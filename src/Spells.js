@@ -1,10 +1,11 @@
-import { GlobalContext } from "./Context/GlobalContext";
-import { useContext } from "react";
+// import { GlobalContext } from "./Context/GlobalContext";
+// import { useContext } from "react";
 import spellNames from "./Data/SpellsName";
+import { SiDungeonsanddragons } from 'react-icons/si';
 
 const Spells = () => {
 
-    const state = useContext(GlobalContext);
+    // const state = useContext(GlobalContext);
     const getSpellsByFirstLetter = [];
 
     for (let i = 97; i <= 122; i++) {
@@ -13,7 +14,7 @@ const Spells = () => {
 
     return (
         <div>
-            <h1>Spells</h1>
+            <h1><SiDungeonsanddragons></SiDungeonsanddragons> Spells</h1>
             {getSpellsByFirstLetter.map((letter, index) => {
                 return (
                     <div key={index}>
