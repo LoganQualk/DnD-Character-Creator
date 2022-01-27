@@ -11,9 +11,7 @@ function App() {
   return (
     <GlobalProvider>
       <Router>
-        <div>
           <Navbar />
-          <div>
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -28,8 +26,6 @@ function App() {
                 <Notes />
               </Route>
             </Switch>
-          </div>
-        </div>
       </Router>
     </GlobalProvider>
   );

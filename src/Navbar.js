@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
+import { SiDungeonsanddragons } from 'react-icons/si';
 
 const Navbar = () => {
     return (
         <nav className='navbar'>
-            <h1>Nav</h1>
             <div>
-                <Link to="/">Home</Link>
+                <Link to="/"><SiDungeonsanddragons id="onlyIcon"></SiDungeonsanddragons></Link>
                 <Link to="/create">Create</Link>
                 <Link to="/spells">Spells</Link>
                 <Link to="/notes">Notes</Link>
