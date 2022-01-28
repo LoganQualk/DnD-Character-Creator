@@ -12,6 +12,7 @@ function App() {
     <GlobalProvider>
       <Router>
           <Navbar />
+          <div id="container">
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -26,6 +27,7 @@ function App() {
                 <Notes />
               </Route>
             </Switch>
+          </div>
       </Router>
     </GlobalProvider>
   );

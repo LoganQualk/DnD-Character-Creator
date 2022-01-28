@@ -16,9 +16,11 @@ const Spells = () => {
             <h1>Spells</h1>
             {getSpellsByFirstLetter.map((letter, index) => {
                 return (
-                    <div key={index} className="spells">
+                    <div key={index}>
                         <h2>{letter.toUpperCase()}</h2>
-                        {spellNames.filter(name => name.charAt(0).toLowerCase() === letter).map((spell, index) => <p key={index}>{spell}</p>)}
+                        <div className="spells">
+                            {spellNames.filter(name => name.charAt(0).toLowerCase() === letter).map((spell, index) => <p key={index} title={spell}>{spell}</p>)}
+                        </div>
                     </div>
                 )
             })}

@@ -19,11 +19,18 @@ body {
     background-color: var(--blueish-gray);
 }
 
+#container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
 .spells {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    max-height: 4rem;
+    width: 100%;
+    gap: 10rem;
+    row-gap: 2rem;
 }
 
 h1 {
@@ -31,7 +38,11 @@ h1 {
 }
 
 p {
-    max-width: 75ch;
+    width: 25ch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
 }
 
 .navbar {
