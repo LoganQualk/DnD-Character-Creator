@@ -19,8 +19,19 @@ body {
     background-color: var(--blueish-gray);
 }
 
+.spells {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 4rem;
+}
+
 h1 {
     color: black;
+}
+
+p {
+    max-width: 75ch;
 }
 
 .navbar {
@@ -52,10 +63,10 @@ h1 {
 }
 
 #HomePage {
-    background-image: url("./Images/Matthew_Mercer.jpg");
+    /* background-image: url("./Images/Matthew_Mercer.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: contain;
+    background-size: contain; */
     height: 100%;
 }
