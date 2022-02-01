@@ -33,6 +33,11 @@ body {
     row-gap: 2rem;
 }
 
+a:link, p {
+    text-decoration: none;
+    color: black;
+}
+
 h1 {
     color: black;
 }
