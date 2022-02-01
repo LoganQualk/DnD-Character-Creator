@@ -38,6 +38,11 @@ a:link, p {
     color: black;
 }
 
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
 h1 {
     color: black;
 }
