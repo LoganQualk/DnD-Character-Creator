@@ -11,8 +11,6 @@ const Spells = () => {
         getSpellsByFirstLetter.push(String.fromCharCode(i));
     }
 
-    
-
     return (
         <div>
             <h1>Spells</h1>

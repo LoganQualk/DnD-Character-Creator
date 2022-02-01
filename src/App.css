@@ -21,7 +21,8 @@ body {
 
 #container {
     width: min(1200px, 90%);
-    margin: auto;
+    margin-inline: auto; /* left and right */
+    margin-block: 0; /* up and down */
 }
 
 .spells {
