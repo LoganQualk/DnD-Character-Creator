@@ -18,8 +18,8 @@ const Spells = () => {
                 return (
                     <div key={index}>
                         <h2>{letter.toUpperCase()}</h2>
-                        <div className="spells">
-                            {spellNames.filter(name => name.charAt(0).toLowerCase() === letter).map((spell, index) => <a href={'https://open5e.com/spells/'+spell.replace(/[\n\r\s\t]+/g, '-').replace('\'', '').toLowerCase()} target="_blank" rel="noopener noreferrer"><p key={index} title={spell}>{spell}</p></a>)}
+                        <div className="grid">
+                            {spellNames.filter(name => name.charAt(0).toLowerCase() === letter).map((spell, index) => <a href={'https://roll20.net/compendium/dnd5e/'+spell} target="_blank" rel="noopener noreferrer"><p key={index} title={spell}>{spell}</p></a>)}
                         </div>
                     </div>
                 )
@@ -28,4 +28,5 @@ const Spells = () => {
     );
 }
 
+// 'https://open5e.com/spells/'+spell.replace(/[\n\r\s\t]+/g, '-').replace('\'', '').toLowerCase()
 export default Spells;

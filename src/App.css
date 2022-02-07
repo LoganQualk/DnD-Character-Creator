@@ -8,6 +8,10 @@
     flex-direction: column;
 }
 
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 html, body {
     width: 100vw;
     height: 100vh;
@@ -26,7 +30,7 @@ body {
     margin-block: 0; /* up and down */
 }
 
-.spells {
+.grid {
     display: grid;
     justify-content: space-between;
     justify-items: flex-start;
