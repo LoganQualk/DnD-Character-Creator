@@ -10,7 +10,6 @@ const Home = () => {
                     <span className="close">&times;</span>
                     <p>Some text in the Modal..</p>
                 </div>
-
             </div>
         </div>
     )
