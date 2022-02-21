@@ -9,6 +9,7 @@ import Notes from './Notes';
 import Items from './Items';
 import Races from './Races';
 import Backgrounds from './Backgrounds';
+import Modal from './Modal';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      <Modal></Modal>
     </GlobalProvider>
   );
 }

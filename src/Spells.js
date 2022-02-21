@@ -1,17 +1,17 @@
-// import { GlobalContext } from "./Context/GlobalContext";
-// import { useContext } from "react";
+import { GlobalContext } from "./Context/GlobalContext";
+import { useContext } from "react";
 import spellNames from "./Data/SpellsName";
-import Dashboard from "./Dashboard";
 
 const Spells = () => {
 
-    // const state = useContext(GlobalContext);
+    const state = useContext(GlobalContext);
     const getSpellsByFirstLetter = [];
 
     for (let i = 97; i <= 122; i++) {
         getSpellsByFirstLetter.push(String.fromCharCode(i));
     }
 
+    // href={'https://roll20.net/compendium/dnd5e/' + spell}
     return (
         <div>
             <h1>Spells</h1>
@@ -20,7 +20,13 @@ const Spells = () => {
                     <div key={index}>
                         <h2>{letter.toUpperCase()}</h2>
                         <div className="grid">
-                            {spellNames.filter(name => name.charAt(0).toLowerCase() === letter).map((spell, index) => <a key={index} href={'https://roll20.net/compendium/dnd5e/'+spell} target="_blank" rel="noopener noreferrer"><p title={spell}>{spell}</p></a>)}
+                            {spellNames.filter(name => name.charAt(0).toLowerCase() === letter).map((spell, index) =>
+                                <p key={index} title={spell} className="individualSpells" onClick={() => {
+                                    state.setModalPage("spells");
+                                    state.setModalVisible(true);
+                                    state.grabSpellData(spell)
+                                }}>{spell}</p>
+                            )}
                         </div>
                     </div>
                 )
