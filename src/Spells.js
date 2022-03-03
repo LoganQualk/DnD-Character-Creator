@@ -24,7 +24,7 @@ const Spells = () => {
                                 <p key={index} title={spell} className="individualSpells" onClick={() => {
                                     state.setModalPage("spells");
                                     state.setModalVisible(true);
-                                    state.grabSpellData(spell)
+                                    state.grabSpellData(spell);
                                 }}>{spell}</p>
                             )}
                         </div>
