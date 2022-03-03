@@ -6,9 +6,9 @@ const port = 8000;
 
 app.use(cors())
 
-app.get('/monsterLookup', (req, res) => {
+app.get('/spellFind', (req, res) => {
     let name = req.query.name;
-    request("https://api.open5e.com/monsters/?name=" + name, (error, response, body) => {
+    request("https://api.open5e.com/spells/" + name, (error, response, body) => {
         res.send(body);
     })
 });
