@@ -29,12 +29,32 @@ export const GlobalProvider = ({ children }) => {
     // setModalData(whatever I get from API call)
   }
 
+  const grabRaceData = (raceName) => {
+    // api call
+    setIsLoaded(false);
+    const webURL = "http://localhost:8000/race?name="+raceName;
+    fetch(webURL)
+      .then(res => 
+        res.json())
+      .then(
+        (data) => {
+          setModalData(data.results[0]);
+          setIsLoaded(true);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      )
+  }
+
   const globalState = {
     modalVisible, setModalVisible,
     modalPage, setModalPage,
     grabSpellData,
     modalData, setModalData,
-    isLoaded, setIsLoaded
+    isLoaded, setIsLoaded,
+    grabRaceData
   };
 
   // Everything rendering in App.js IS children

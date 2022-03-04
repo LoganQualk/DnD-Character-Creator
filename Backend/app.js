@@ -14,6 +14,13 @@ app.get('/spell', (req, res) => {
     })
 });
 
+app.get('/race', (req, res) => {
+    let name = req.query.name;
+    request("https://api.open5e.com/races/?limit=1&name=" + name, (error, response, body) => {
+        res.send(body);
+    })
+})
+
 // app.get('/spellFind', (req, res) => {
 //     // let name = req.query.name;
 //     let spells = []

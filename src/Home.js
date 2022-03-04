@@ -9,10 +9,8 @@ const Home = () => {
     return (
         <div id="HomePage">
             <h1>HOMEPAGE</h1>
-            <button onClick={() => {
-                state.setModalPage("spells");
-                state.setModalVisible(true);
-            }}>Display Modal</button>
+            <p>Welcome to my DM helper! Click the tabs at the top to see the different things available to retrieve information on.</p>
+            <p>I am sorry if what you are looking for is not here, I am currently limited to what is available via the Open5e API.</p>
         </div>
     )
 }
