@@ -78,6 +78,10 @@ p {
     white-space: pre-line;
 }
 
+#itemDescription {
+    white-space: pre-line;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -112,6 +116,14 @@ p {
 }
 
 .individualSpells {
+    cursor: pointer;
+}
+
+.individualRaces {
+    cursor: pointer;
+}
+
+.individualItems {
     cursor: pointer;
 }
 

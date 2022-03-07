@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { GlobalContext } from './Context/GlobalContext';
 import ModalSpells from './ModalSpells';
 import ModalRaces from './ModalRaces';
+import ModalItems from './ModalItems';
 
 const Modal = () => {
 
@@ -31,6 +32,8 @@ const Modal = () => {
               <ModalSpells></ModalSpells>) ||
             (state.modalPage === "races" &&
               <ModalRaces></ModalRaces>) ||
+            (state.modalPage === "items" && 
+              <ModalItems></ModalItems>) ||
             <h1>ERROR: Page Not Found</h1>
           }
         </div>

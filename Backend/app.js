@@ -21,17 +21,24 @@ app.get('/race', (req, res) => {
     })
 })
 
-// app.get('/spellFind', (req, res) => {
+app.get('/item', (req, res) => {
+    let name = req.query.name;
+    request("https://api.open5e.com/magicitems/?limit=1&name=" + name, (error, response, body) => {
+        res.send(body);
+    })
+})
+
+// app.get('/itemFind', (req, res) => {
 //     // let name = req.query.name;
-//     let spells = []
-//     for (let page = 1; page <= 7; page++) {
-//         request("https://api.open5e.com/spells/?page=" + page, (error, response, body) => {
-//             spells = [...spells, ...(JSON.parse(body).results.map(spell => spell.name))];
+//     let items = []
+//     for (let page = 1; page <= 5; page++) {
+//         request("https://api.open5e.com/magicitems/?page=" + page, (error, response, body) => {
+//             items = [...items, ...(JSON.parse(body).results.map(item => item.name))];
 //         })
 //     }
 
 //     setTimeout(() => {
-//         res.json(spells.sort());
+//         res.json(items.sort());
 //     }, 10000)
 // });
 

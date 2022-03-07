@@ -9,6 +9,7 @@ const ModalRaces = () => {
     const raceData = state.modalData;
 
     const converter = new showdown.Converter();
+    console.log(raceData);
 
     return (
         <div>
